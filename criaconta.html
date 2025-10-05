@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta - Seu Site</title>
+    <link rel="stylesheet" href="criaconta.css">
+    </head>
+<body>
+    <div class="login-container">
+        <h1>Crie sua conta</h1>
+        <p class="subtitle">É rápido e fácil.</p>
+        
+        <form class="login-form" action="main.html">
+            
+            <div class="input-group">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" name="name" placeholder="Seu nome e sobrenome" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="nome@exemplo.com" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Mínimo de 8 caracteres" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="confirm-password">Confirmar Senha</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Digite a senha novamente" required>
+            </div>
+            
+            <p class="terms">
+                Ao clicar em "Criar Conta", você concorda com nossos <a href="#">Termos</a> e <a href="#">Política de Dados</a>.
+            </p>
+
+            <button type="submit" class="btn btn-primary create-account-btn">Criar Conta</button>
+            
+            <a href="login.html" class="back-to-login">Já tem uma conta? Fazer Login</a>
+        </form>
+    </div>
+</body>
+</html>

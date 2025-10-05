@@ -1,0 +1,631 @@
+/* PALETA DE CORES */
+:root {
+    /* Cores Fornecidas */
+    --color-cyan: #1ABC9C; /* Cor aproximada do primeiro bloco na primeira imagem */
+    --color-blue-medium: #1F86DB;
+    --color-blue-bright: #0B3CDB;
+    --color-dark-navy: #00325C;
+    
+    /* Cores de Base do Layout (Para replicar as imagens) */
+    --color-text-dark: #2c3e50; /* Azul Escuro para textos */
+    --color-background-light: #f9f9f9;
+    --color-card-background: #ffffff;
+    --color-border-light: #ececec;
+    
+    /* Cores Específicas das Missões */
+    --color-active: #1ABC9C; /* Verde/Cyan para "Ativa" */
+    --color-planned: #F39C12; /* Laranja para "Planejada" */
+    --color-development: #3498DB; /* Azul para "Em Desenvolvimento" */
+    --color-text-muted: #7f8c8d;
+}
+
+/* ESTILOS GERAIS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: var(--color-background-light);
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--color-dark-navy);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-blue-bright);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+}
+
+/* BOTÕES DE ESTILO UNIFICADO */
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-contact {
+    background-color: var(--color-blue-bright);
+    color: white;
+}
+
+.btn-contact:hover {
+    background-color: var(--color-blue-medium);
+}
+
+.btn-dark {
+    background-color: var(--color-dark-navy);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-dark:hover {
+    background-color: var(--color-blue-bright);
+}
+
+.btn-light {
+    background-color: white;
+    color: var(--color-dark-navy);
+    border: 1px solid var(--color-border-light);
+    margin-left: 15px;
+}
+
+.btn-light:hover {
+    background-color: var(--color-border-light);
+}
+
+/* NOVO BOTÃO PARA 'VER TODAS AS MISSÕES' */
+.btn-light-border {
+    background-color: white;
+    color: var(--color-dark-navy);
+    border: 1px solid var(--color-border-light);
+    padding: 15px 35px;
+    border-radius: 50px; /* Borda mais arredondada como na imagem */
+    font-weight: 500;
+}
+
+.btn-light-border:hover {
+    background-color: var(--color-border-light);
+    border-color: var(--color-blue-medium);
+}
+
+/* 1. HEADER E HERO SECTION */
+.main-header {
+    background: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-dark-navy);
+}
+
+.logo-text {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: var(--color-dark-navy);
+    font-weight: 500;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.nav-links a:hover {
+    border-color: var(--color-blue-bright);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 85vh;
+    background: 
+        linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+        url('hero-astronauta.jpg') no-repeat center center; /* IMAGEM DE FUNDO! */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.tag-exploring {
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    padding: 8px 18px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: var(--color-dark-navy);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.tag-exploring .dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-cyan);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--color-dark-navy);
+}
+
+.hero-content .subtitle {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #555;
+}
+
+.hero-actions {
+    margin-bottom: 50px;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll-indicator i {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-2px);
+    }
+}
+
+
+/* 2. ÁREAS DE PESQUISA */
+.research-areas-section {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.research-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.research-card {
+    background-color: var(--color-card-background);
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid var(--color-border-light);
+    transition: all 0.3s ease;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.research-card:hover {
+    border-color: var(--color-blue-medium);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.research-card i {
+    font-size: 1.8rem;
+    color: var(--color-blue-bright);
+    background-color: #f0f4f7;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.research-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--color-dark-navy);
+}
+
+.research-card p {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+
+/* 3. DESCOBERTAS RECENTES */
+.recent-discoveries-section {
+    padding: 80px 20px;
+    background-color: var(--color-background-light);
+}
+
+.discovery-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.discovery-card {
+    background-color: var(--color-card-background);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.discovery-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-wrapper {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+}
+
+.img-card1 img {
+    width: 446px;
+    height: 200px;
+    object-fit: cover;
+    
+}
+
+
+
+/* IMAGENS DE FUNDO CORRIGIDAS - Os arquivos devem estar na mesma pasta! */
+.image-1 {
+    /* CORRIGIDO: Removido o caminho absoluto e usando um nome de arquivo local */
+    background-image: url('discovery-bacteria.jpg'); 
+}
+.image-2 {
+    background-image: url('discovery-botany.jpg'); 
+}
+.image-3 {
+    background-image: url('discovery-genetics.jpg'); 
+}
+
+.category-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.card-content {
+    padding: 20px 25px 30px;
+}
+
+.discovery-year {
+    font-size: 0.8rem;
+    color: var(--color-blue-medium);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--color-dark-navy);
+}
+
+.card-content p {
+    color: #6c757d;
+}
+
+/* 4. MISSÕES CIENTÍFICAS (NOVA SEÇÃO) */
+.missions-section {
+    padding: 80px 20px 40px; /* Reduz o padding inferior para aproximar do botão */
+    background-color: white;
+    text-align: center;
+}
+
+.missions-header h2 {
+    font-size: 3rem; /* Título maior */
+}
+
+.missions-header p {
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.missions-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.mission-card {
+    background-color: var(--color-card-background);
+    border: 1px solid var(--color-border-light);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.mission-card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+}
+
+.mission-status-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mission-status-wrapper i {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    background-color: #f0f4f7;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.mission-tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 50px;
+    color: white;
+}
+
+/* Cores das tags de status */
+.tag-active {
+    background-color: var(--color-active);
+}
+.tag-planned {
+    background-color: var(--color-planned);
+}
+.tag-development {
+    background-color: var(--color-development);
+}
+
+.mission-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--color-dark-navy);
+}
+
+.mission-description {
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    min-height: 50px; /* Para manter o alinhamento em diferentes tamanhos de texto */
+}
+
+.mission-details p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.mission-details i {
+    margin-right: 10px;
+    color: var(--color-blue-medium);
+}
+
+.missions-action {
+    padding-bottom: 80px;
+}
+
+
+/* 5. FOOTER (NOVA SEÇÃO) */
+.main-footer {
+    background-color: white;
+    border-top: 1px solid var(--color-border-light);
+    padding: 60px 30px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* 4 colunas */
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand .logo {
+    font-size: 1.5rem; /* Ajusta o tamanho do logo no footer */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-brand p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    max-width: 250px;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    color: var(--color-dark-navy);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: var(--color-text-muted);
+    transition: color 0.3s;
+    font-size: 0.95rem;
+}
+
+.footer-column ul li a:hover {
+    color: var(--color-blue-bright);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border-light);
+}
+
+.footer-bottom p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .discovery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .missions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .navbar {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        display: none;
+    }
+    .btn-contact {
+        margin-top: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-dark, .btn-light {
+        width: 100%;
+        margin: 5px 0 0 0;
+    }
+
+    .research-grid, .discovery-grid, .missions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-brand {
+        text-align: center;
+        /* Centraliza o logo e o parágrafo */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-brand p {
+        max-width: none;
+    }
+}

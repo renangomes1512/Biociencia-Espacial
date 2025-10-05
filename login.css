@@ -1,0 +1,161 @@
+/*
+ * Reset Básico e Fontes
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5; /* Cor de fundo suave, comum em muitos sites */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/*
+ * Container Principal de Login
+ */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+    width: 100%;
+    max-width: 400px; /* Largura padrão para formulários de login */
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #1c1e21;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/*
+ * Estilo dos Campos de Entrada
+ */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #606770;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #1877f2; /* Cor de foco popular (azul) */
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2); /* Sombra de foco */
+    outline: none;
+}
+
+/*
+ * Estilo dos Botões
+ */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+}
+
+/* Botão Principal: Entrar (Azul) */
+.btn-primary {
+    background-color: #1877f2;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #166fe5;
+}
+
+/* Botão Secundário: Criar Conta (Verde) */
+.btn-secondary {
+    background-color: #42b72a;
+    color: white;
+    margin-top: 10px; /* Espaço após o separador */
+}
+
+.btn-secondary:hover {
+    background-color: #36a420;
+}
+
+/*
+ * Separador
+ */
+.separator {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #606770;
+    position: relative;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #dadde1;
+}
+
+.separator::before {
+    left: 0;
+}
+
+.separator::after {
+    right: 0;
+}
+
+/*
+ * Link 'Esqueceu sua senha?'
+ */
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #1877f2;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/*
+ * Media Query para Responsividade (Melhoria)
+ * Em telas menores (ex: celulares), a sombra é removida para um look mais nativo.
+ */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 20px;
+        border-radius: 0; /* Ocupa a largura total e remove o raio nas bordas */
+        box-shadow: none;
+        max-width: 100%;
+    }
+}

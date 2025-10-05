@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioSpace - Biociência Espacial</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo" id="logo-inicio">BS <span class="logo-text">BioSpace</span></div>
+            <ul class="nav-links">
+                <li><a href="#research" class="nav-link" data-target="research">Pesquisas</a></li>
+                <li><a href="#discoveries" class="nav-link" data-target="discoveries">Descobertas</a></li>
+                <li><a href="#missions-section" class="nav-link" data-target="missions-section" id="link-missoes">Missões</a></li>
+                <li><a href="#"  id="link-sobre">Sobre</a></li>
+            </ul>
+            <form action="login.html">
+                <a href="login.html">
+                <button class="btn btn-contact" id="btn-contato" >Entrar</button>
+                </a>
+            </form>
+        </nav>
+
+        <div class="hero-section">
+            <div class="hero-content">
+                <div class="tag-exploring">
+                    <span class="dot"></span> Explorando a vida além da Terra
+                </div>
+                <h1>Biociência Espacial</h1>
+                <p class="subtitle">
+                    Desvendando os mistérios da vida em ambientes extraterrestres. Pesquisas pioneiras que expandem 
+                    nossa compreensão sobre adaptação biológica, evolução e a possibilidade de vida além do nosso planeta.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-dark" id="btn-explorar" >Explorar Pesquisas <i class="fas fa-arrow-right"></i></button>
+                    <button class="btn btn-light" id="btn-missoes" >Nossas Missões</button>
+                </div>
+                <div class="scroll-indicator">
+                    <span>ROLE PARA BAIXO</span>
+                    <i class="fas fa-mouse"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="research-areas-section" id="research">
+        <div class="section-header">
+            <h2>Classificação por Área Temática</h2>
+            <p>Agrupe as publicações em categorias amplas, essenciais para a Biociência Espacial.</p>
+        </div>
+        
+        <div class="research-grid">
+            <div class="research-card" id="card-microbiologia" >
+                <i class="fas fa-flask"></i>
+                <h3>Microbiologia Espacial</h3>
+                <p>Estudos sobre microrganismos em ambientes de microgravidade e radiação.</p>
+            </div>
+            
+            <div class="research-card" id="card-fisiologia" >
+                <i class="fas fa-heartbeat"></i>
+                <h3>Fisiologia Humana no Espaço</h3>
+                <p>Efeitos da microgravidade, radiação e isolamento no corpo e mente humanos.</p>
+            </div>
+            
+            <div class="research-card" id="card-botanica" >
+                <i class="fas fa-seedling"></i>
+                <h3>Botânica Espacial</h3>
+                <p>Pesquisa sobre o crescimento e a reprodução de plantas para suporte de vida.</p>
+            </div>
+            
+            <div class="research-card" id="card-biotecnologia">
+                <i class="fas fa-cogs"></i>
+                <h3>Biotecnologia Espacial</h3>
+                <p>Aplicações de biotecnologia em ambientes espaciais, como produção de remédios.</p>
+            </div>
+            
+            <div class="research-card" id="card-ecossistemas" >
+                <i class="fas fa-globe-europe"></i>
+                <h3>Ecossistemas Espaciais</h3>
+                <p>Estudos sobre habitats fechados e ciclos biogeoquímicos para missões sustentáveis.</p>
+            </div>
+            
+            <div class="research-card" id="card-exploracao" >
+                <i class="fas fa-dna"></i>
+                <h3>Exploração Planetária</h3>
+                <p>Pesquisas relacionadas à astrobiologia e a potencial busca por vida em outros planetas.</p>
+            </div>
+        </div>
+    </section>
+    <section class="recent-discoveries-section" id="discoveries">
+        <div class="section-header">
+            <h2>Descobertas Recentes</h2>
+            <p>Avanços científicos que estão redefinindo nossa compreensão sobre a vida no universo.</p>
+        </div>
+
+        <div class="discovery-grid">
+            
+            <div class="discovery-card" id="disc-bacteria" >
+                <div class="card-image-wrapper image-1">
+                    <div class="img-card1"><img src="img/foto.png.01.png" alt="Cepa bacteriana no espaço"></div>
+                    <span class="category-tag tag-microbiology">Microbiologia</span>
+                </div>
+                <div class="card-content">
+                    <span class="discovery-year">2024</span>
+                    <h3>Bactérias Resistentes à Radiação</h3>
+                    <p>Descoberta de cepas bacterianas capazes de sobreviver a níveis extremos.</p>
+                    </div>
+            </div>
+
+            <div class="discovery-card" id="disc-cultivo" >
+                <div class="card-image-wrapper image-2">
+                    <div class="img-card1"><img src="img/foto01.jpg" alt="Cultivo de vegetais em laboratório"></div>
+                    <span class="category-tag tag-botany">botÂnica</span>
+                </div>
+                <div class="card-content">
+                    <span class="discovery-year">2024</span>
+                    <h3>Cultivo em Microgravidade</h3>
+                    <p>Desenvolvimento de técnicas para cultivo de vegetais em ambientes de gravidade zero.</p>
+                </div>
+            </div>
+
+            <div class="discovery-card" id="disc-mutacoes" >
+                <div class="card-image-wrapper image-3">
+                    <div class="img-card1"><img src="img/foto02.jpg" alt="Representação de mutação de DNA"></div>
+                    <span class="category-tag tag-genetics">Genética</span>
+                </div>
+                <div class="card-content">
+                    <span class="discovery-year">2023</span>
+                    <h3>Mutações Adaptativas</h3>
+                    <p>Identificação de alterações genéticas que facilitam a adaptação ao ambiente espacial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="missions-section" id="missions-section">
+        <div class="missions-header">
+            <h2>Missões Científicas</h2>
+            <p>Expedições que levam a ciência além dos limites terrestres em busca de respostas fundamentais.</p>
+        </div>
+
+        <div class="missions-grid">
+            
+            <div class="mission-card active-mission">
+                <div class="mission-status-wrapper">
+                    <i class="fas fa-rocket"></i>
+                    <span class="mission-tag tag-active">Ativa</span>
+                </div>
+                <h3>BioLab ISS</h3>
+                <p class="mission-description">
+                    Experimentos contínuos na Estação Espacial Internacional focados em biologia celular.
+                </p>
+                <div class="mission-details">
+                    <p><i class="fas fa-calendar-alt"></i> Continua</p>
+                    <p><i class="fas fa-user-astronaut"></i> 6 tripulantes</p>
+                </div>
+            </div>
+
+            <div class="mission-card planned-mission">
+                <div class="mission-status-wrapper">
+                    <i class="fas fa-rocket"></i>
+                    <span class="mission-tag tag-planned">Planejada</span>
+                </div>
+                <h3>Mars BioSample</h3>
+                <p class="mission-description">
+                    Missão de coleta e análise de amostras biológicas potenciais em Marte.
+                </p>
+                <div class="mission-details">
+                    <p><i class="fas fa-calendar-alt"></i> 2026-2028</p>
+                    <p><i class="fas fa-user-astronaut"></i> 4 tripulantes</p>
+                </div>
+            </div>
+
+            <div class="mission-card development-mission">
+                <div class="mission-status-wrapper">
+                    <i class="fas fa-rocket"></i>
+                    <span class="mission-tag tag-development">Em Desenvolvimento</span>
+                </div>
+                <h3>Europa Explorer</h3>
+                <p class="mission-description">
+                    Investigação de possíveis formas de vida nas luas geladas de Júpiter.
+                </p>
+                <div class="mission-details">
+                    <p><i class="fas fa-calendar-alt"></i> 2030+</p>
+                    <p><i class="fas fa-user-times"></i> Não tripulada</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="missions-action">
+            <button class="btn btn-light-border" >Ver Todas as Missões</button>
+        </div>
+    </section>
+
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-column footer-brand">
+                <div class="logo">BS BioSpace</div>
+                <p>Expandindo as fronteiras da biologia para além da Terra.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Pesquisa</h4>
+                <ul>
+                    <li><a href="#" >Microbiologia</a></li>
+                    <li><a href="#" >Genética</a></li>
+                    <li><a href="#" >Agricultura</a></li>
+                    <li><a href="#" >Bioquímica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="#" >Publicações</a></li>
+                    <li><a href="#" >Dados Abertos</a></li>
+                    <li><a href="#" >Colaborações</a></li>
+                    <li><a href="#" >Educação</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contato</h4>
+                <ul>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 BioSpace. Explorando a vida no universo.</p>
+        </div>
+    </footer>
+
+
+    <script src="main.js"></script> 
+    
+    <script>
+        /**
+         * FUNÇÃO PRINCIPAL: Controla a navegação e o clique de todos os botões e cards.
+         * @param {string} target - Nome da ação ou ID da seção de destino.
+         */
+        function handleNavigation(target) {
+            // 1. Lógica de Rolagem Suave para links internos
+            if (target === 'research' || target === 'discoveries' || target === 'missions-section') {
+                const section = document.getElementById(target);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                    return; // Sai da função após a rolagem
+                }
+            }
+
+            // 2. Lógica de Alerta (para simular outras ações como ir para uma nova página ou formulário)
+            alert(`Ação Executada! O item "${target.toUpperCase().replace(/-/g, ' ')}" foi clicado.`);
+            console.log('Navegação/Ação:', target);
+        }
+        
+        // Melhora a UX: Adiciona cursor de clique para os cards
+        document.querySelectorAll('.research-card, .discovery-card, .mission-card').forEach(card => {
+            card.style.cursor = 'pointer'; 
+        });
+
+        // Adiciona a rolagem suave aos links da navbar (Pesquisas, Descobertas, Missões)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('data-target');
+                if (targetId) {
+                    e.preventDefault();
+                    handleNavigation(targetId);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
